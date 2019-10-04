@@ -398,7 +398,6 @@ void intro()
 	cout<<"\n\n\n\t  BANK";
 	cout<<"\n\n\tMANAGEMENT";
 	cout<<"\n\n\t  SYSTEM";
-	cout<<"\n\n\n\nMADE BY : Abhay Rathour";
 	cout<<"\n\nSCHOOL : Shri Guru Ram Rai Public School\n\n";
 	system("PAUSE");
 }
