@@ -290,7 +290,7 @@ void delete_account(int n)
 	ofstream outFile;
 	inFile.open("account.dat",ios::binary);
 	if(!inFile)
-	{
+	{ 	cout<<"Wrong Steps Performesd";
 		cout<<"File could not be open !! Press any Key...";
 		return;
 	}
@@ -359,6 +359,7 @@ void deposit_withdraw(int n, int option)
 			if(option==1)
 			{
 				cout<<"\n\n\tTO DEPOSITE AMOUNT ";
+				cout<<"\nEnter the Valid Ammount";
 				cout<<"\n\nEnter The amount to be deposited :\t";
 				cin>>amt;
 				ac.dep(amt);
@@ -370,7 +371,8 @@ void deposit_withdraw(int n, int option)
 				cin>>amt;
 				int bal=ac.retdeposit()-amt;
 				if((bal<500 && ac.rettype()=='S') || (bal<1000 && ac.rettype()=='C'))
-					cout<<"Insufficient Balance.\nBalance cannot be less than 500 for Savings Account and 1000 for Currents\n";
+				{	cout<<"Transaction Failed";
+					cout<<"Insufficient Balance.\nBalance cannot be less than 500 for Savings Account and 1000 for Currents\n";}
 				else
 					ac.draw(amt);
 		      }
